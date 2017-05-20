@@ -26,7 +26,13 @@ int main(int argc, char *argv[]) {
 		char* arg = argv[1];
 		/*if the command argument is not 1, 2 or 3, exit the program with return 1 to indicate an error*/
 		if(strcmp(arg, "1") == 0 || strcmp(arg, "2") == 0 || strcmp(arg, "3") == 0){
-			printf("ok, this is fine");
+			if(strcmp(arg, "1") == 0){
+				remove_red();
+			}
+			else if(strcmp(arg, "2") == 0){
+				convert_to_black_and_white();
+			}
+			else{printf("wrong\n");}
 		}
 		else{
 			fprintf(stderr, "%s", "Error: Expecting one command-line argument, which needs to be either 1, 2, or 3.\n");
