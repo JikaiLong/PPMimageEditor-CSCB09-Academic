@@ -32,7 +32,9 @@ int main(int argc, char *argv[]) {
 			else if(strcmp(arg, "2") == 0){
 				convert_to_black_and_white();
 			}
-			else{printf("wrong\n");}
+			else{ 
+				instagram_square(); 
+			}
 		}
 		else{
 			fprintf(stderr, "%s", "Error: Expecting one command-line argument, which needs to be either 1, 2, or 3.\n");
